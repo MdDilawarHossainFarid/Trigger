@@ -143,13 +143,35 @@ cout << endl;
 space -= 2;
     }
 }
+
+void print13(int n){
+    int num = 1;
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= i; j++){
+            cout << num << " ";
+            num += 1;
+        }
+        cout << endl;
+    }
+}
+
+void print14(int n){
+    int num = 1;
+    for(int i = 1; i <= n; i++){
+        for(char ch = 'A'; ch <= 'A' + (n - i - 1); ch++){
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+
 int main(){
     int t;
     cin >> t;
 for(int i = 0; i < t; i++){
     int n;
     cin >> n;
-    print12(n);
+    print14(n);
    
 
 }
