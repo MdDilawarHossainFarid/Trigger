@@ -165,13 +165,85 @@ void print14(int n){
     }
 }
 
+void print19(int n){
+    int initial = 0;
+    for(int i = 0; i <= n; i++){
+        //  stars
+        for(int j = 1; j <= n - i; j++){
+            cout << "*";
+        }
+        // spaces
+        for(int j = 0; j <= initial; j++){
+            cout << " ";
+        }
+        //  stars
+        for(int j = 1; j <= n - i; j++){
+            cout << "*";
+        }
+           initial += 2;
+        cout << endl;
+     
+    }
+    initial = 8;
+    for(int i = 0; i <= n; i++){
+        //  stars
+        for(int j = 1; j <= i; j++){
+            cout << "*";
+        }
+        // spaces
+        for(int j = 0; j <= initial; j++){
+            cout << " ";
+        }
+           //  stars
+        for(int j = 1; j <= i; j++){
+            cout << "*";
+        }
+          initial -= 2;
+          cout << endl;
+    }
+
+}
+
+
+void print21(int n){
+    int initial = 0;
+    for(int i = 0; i <= n; i++){
+        //  stars
+        for(int j = 1; j <= n - i; j++){
+            cout << " * ";
+        }
+        // spaces
+        for(int j = 0; j <= initial; j++){
+            cout << "   ";
+        }
+        //  stars
+        for(int j = 1; j <= n - i; j++){
+            cout << " * ";
+        }
+        //  stars
+        for(int j = 1; j <= n - i; j++){
+            cout << " * ";
+        }
+        // spaces
+        for(int j = 0; j <= initial; j++){
+            cout << "   ";
+        }
+        //  stars
+        for(int j = 1; j <= n - i; j++){
+            cout << " * ";
+        }
+        cout << endl;
+        initial += 2;
+        
+    }
+}
 int main(){
     int t;
     cin >> t;
 for(int i = 0; i < t; i++){
     int n;
     cin >> n;
-    print14(n);
+    print19(n);
    
 
 }
