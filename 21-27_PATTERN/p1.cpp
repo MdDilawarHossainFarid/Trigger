@@ -157,7 +157,7 @@ void print13(int n){
 
 void print14(int n){
     for(int i = 1; i <= n; i++){
-        for(char ch = 'A'; ch <= 'A' + i; ch++){
+        for(char ch = 'A'; ch <= 'A' - i; ch++){
             cout << ch << " ";
         }
         cout << endl;
@@ -210,6 +210,16 @@ void print17(int n){
              cout << " ";
          }
         cout << endl;
+    }
+}
+
+void print18(int n){
+    for(int i = 0; i <= n; i++){
+        for(char ch = 'E' - i; ch <= 'E'; ch++){
+            cout << ch << " ";
+        }
+        cout << endl;
+
     }
 }
 
@@ -327,13 +337,24 @@ void print30(int n){
     }
 }
 
+void print31(int n){
+
+    for(int i = 0; i < n; i++){
+        char ch = 'E' - i;
+        for(int j = 0; j <= i; j++){
+            cout << ch << " ";
+        }
+        cout << endl;  
+    }
+}
+
 int main(){
     int t;
     cin >> t;
 for(int i = 0; i < t; i++){
     int n;
     cin >> n;
-    print17(n);
+    print18(n);
    
 
 }
