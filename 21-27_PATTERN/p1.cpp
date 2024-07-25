@@ -156,11 +156,59 @@ void print13(int n){
 }
 
 void print14(int n){
-    int num = 1;
     for(int i = 1; i <= n; i++){
+        for(char ch = 'A'; ch <= 'A' + i; ch++){
+            cout << ch << " ";
+        }
+        cout << endl;
+
+    }
+}
+
+void print16(int n){
+
+    for(int i = 0; i < n; i++){
+        char ch = 'A' + i;
+        for(int j = 0; j <= i; j++){
+            cout << ch << " ";
+        }
+        cout << endl;  
+    }
+}
+
+void print15(int n){
+    for(int i = 0; i <= n; i++){
+        cout << i ;
         for(char ch = 'A'; ch <= 'A' + (n - i - 1); ch++){
             cout << ch << " ";
         }
+        cout << endl;
+    }
+}
+
+void print17(int n){
+    for(int i = 0; i < n; i++){
+        // space
+        for(int j = 0; j < n-i-1; j++)
+        {
+            cout << " ";
+        }
+        //charecters
+      char ch = 'A';
+      int breakpoint = (2*i+1) / 2;
+      for (int j = 0; j < 2*i +1; j++){
+          cout << ch;
+          if(j <= breakpoint){
+              ch++;
+          } else {
+              ch--;
+          }
+
+      }
+        // space
+         for(int j = 0; j < n-i-1; j++){
+             cout << " ";
+         }
         cout << endl;
     }
 }
@@ -278,13 +326,14 @@ void print30(int n){
         
     }
 }
+
 int main(){
     int t;
     cin >> t;
 for(int i = 0; i < t; i++){
     int n;
     cin >> n;
-    print21(n);
+    print17(n);
    
 
 }
