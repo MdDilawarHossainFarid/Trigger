@@ -52,11 +52,11 @@ void fun6(int n){
     cout << (n % 2);
 }
 
-int SumOfZero(int n){
+int SumOfNumber(int n){
     if(n == 0){
         return 0;
     }
-    return n + SumOfZero(n - 1);
+    return n + SumOfNumber(n - 1);
 }
 
 int fact(int n){
@@ -66,12 +66,23 @@ int fact(int n){
 return n * (n-1);
 }
 
+int fib(int n){
+    if(n <= 1){
+        return n;
+    }
+        int last = fib(n -1);
+        int secendLast = fib(n - 2);
+        return last + secendLast;
+    
+}
+
+
 int main(){
     int t;
     cin >> t;
 for(int i = 0; i < t; i++){
     int n;
     cin >> n ;
-  cout << fact(n);
+  cout << fib( n );
 }
 }
