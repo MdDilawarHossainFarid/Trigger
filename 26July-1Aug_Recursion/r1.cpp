@@ -45,7 +45,12 @@ int fun5(int n){
     }
 }
 
-
+void fun6(int n){
+    if(n == 0)
+        return;
+    fun6(n/2);
+    cout << (n % 2);
+}
 
 
 int main(){
@@ -54,6 +59,6 @@ int main(){
 for(int i = 0; i < t; i++){
     int n;
     cin >> n;
-   	cout << fun5(n);
+    fun6(n);
 }
 }
