@@ -52,13 +52,26 @@ void fun6(int n){
     cout << (n % 2);
 }
 
+int SumOfZero(int n){
+    if(n == 0){
+        return 0;
+    }
+    return n + SumOfZero(n - 1);
+}
+
+int fact(int n){
+    if(n == 0){
+        return 1;
+    }
+return n * (n-1);
+}
 
 int main(){
     int t;
     cin >> t;
 for(int i = 0; i < t; i++){
     int n;
-    cin >> n;
-    fun6(n);
+    cin >> n ;
+  cout << fact(n);
 }
 }
