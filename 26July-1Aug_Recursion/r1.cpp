@@ -76,6 +76,12 @@ int fib(int n){
     
 }
 
+int sumOfDigit(int n){
+    if(n < 10){
+        return n;
+    }
+return sumOfDigit(n / 10) + n % 10;
+}
 
 int main(){
     int t;
@@ -83,6 +89,6 @@ int main(){
 for(int i = 0; i < t; i++){
     int n;
     cin >> n ;
-  cout << fib( n );
+  cout << sumOfDigit( n );
 }
 }
